@@ -1,74 +1,302 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  overflow: hidden;
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    background: #000 url(assets/stars.png);
+    height: auto;
+    color: white;
+    margin: 0;
+    font-family: 'Roboto Mono';
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  background-color: #f5f5f5;
-  color: #333;
+.parallax {
+    background: url(assets/titik.png) repeat center top;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 8% ;
+}
 
+.navbar {
+    height: 80px;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-  display: flex;
-  height: 100vh;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 25px;
 }
 
-.header {
-  text-align: center;
-  width: 100%;
-  padding-top: 80px;
-
+.menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0;
+    gap: 100px;
+    translate: -70px 0px;
 }
 
-.scroll-container {
-  height: 100vh;
-  /* width: 300px; */
-  /* background: red; */
+.menu li {
+    list-style: none;
 }
 
-.carousel-primary,
-.carousel-secondary {
-  top: 26%;
-  left: 100%;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
+.menu li a {
+    text-decoration: none;
+    color: white;
 }
 
-.carousel-primary img {
-  width: 100%;
-  margin-left: 20px;
-  border-radius: 14px;
+.btn a{
+    display: inline-block;
+    border: solid;
+    border-radius: 50px;
+    padding: 8px;
+    translate: 0px -10px;
+    transition: 200ms;
 }
 
-.carousel-primary {
-  display: flex;
-  justify-content: space-around;
-  animation: scroll-horizontal 20s linear infinite;
+.btn a:hover {
+    transition: 200ms;
+    transform: scale(1.1);
+    background: white;
+    /* box-shadow: white; */
+    color: black;
 }
 
-.carousel-secondary {
-  animation: scroll-horizontal 20s linear infinite;
-  animation-delay: 10s;
+.logo {
+    /* padding-top: 25px; */
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
 }
 
-@keyframes scroll-horizontal {
-  0% {
-    left: 100%;
-  }
-
-  100% {
-    left: -100%;
-  }
+.home {
+    height: 648px;
+    /* background-color: rgba(255, 255, 255, 0.412); */
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-size: 40px;
 }
+
+.home h3 {
+    margin: 0;
+}
+
+.home h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.home p {
+    margin: 1;
+}
+
+.project {
+    height: auto;
+    /* background-color: rgba(208, 198, 172, 0.412); */
+    /* display: flex;
+    justify-content: center; */
+    margin-bottom: 50px;
+    padding-top: 0;
+}
+
+.cent-proj {
+    display: flex;
+    justify-content: center;
+}
+
+.two-box {
+    width: 60%;
+    /* background-color: rgba(0, 255, 255, 0.382); */
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 20%; */
+    margin-bottom: 80px;
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+    /* background-color: rgba(0, 0, 255, 0.411); */
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+    background-color: rgba(255, 255, 255, 0.468);
+    border-radius: 10%;
+    transition: 200ms;
+}
+
+.box:hover {
+    cursor: pointer;
+    transition: 200ms;
+    transform: scale(1.2);
+}
+
+.jud-proj {
+    height: 540px;
+    background: url(assets/clouds.png) center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.jud-proj h1 {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 50px;
+    margin-top: 0;
+    padding-top: 260px;
+}
+
+.container-scroll {
+    translate:0 30px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.scroller {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.item {
+    display: inline-block;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    padding: 10px 10px;
+    margin: 0 15px;
+    transition: transform 0.2s;
+    font-size: 20px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.bottom {
+    background-color: gray;
+    border-radius:50px 50px 0px 0px;
+    height: 170px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottom h1 {
+    translate: 0px 70px;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    color: #000;
+}
+
+.cont-bot-icon{
+    translate: 0px 55px;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    display: flex;
+}
+
+.cont-bot-icon a{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    border: solid;
+    border-radius: 50px;
+    border-color: #000;
+    transition: 300ms;
+}
+
+.cont-bot-icon img {
+    scale: 0.8;
+    translate: -15px -15px;
+}
+
+.cont-bot-icon a:hover {
+    transition: 300ms;
+    scale: 1.5;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar{
+        transform: translateY(8px);
+    }
+    
+    .home {
+        transform: translateY(100px);
+        font-size: 100%;
+        height: 400px;
+    }
+
+    .home h1 {
+        font-size: 230%;
+        margin-bottom: 30px;
+    }
+    
+    .home p {
+        margin-bottom: 15px;
+    }
+
+    .container-scroll {
+        transform: translateY(140px);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .jud-proj {
+        background-size: 100%;
+    }
+
+    .two-box {
+        width: 70%;
+        margin-bottom: -60px;
+    }
+
+    .box {
+        width: 180px;
+        height: 240px;
+    }
+
+    .bottom h1 {
+        font-size: 20px;
+    }
+
+    .bottom {
+        width: auto;
+    }
+    
+    .cont-bot-icon a{
+        width: 10px;
+        height: 10px;
+    }
+    
+    .cont-bot-icon img {
+        scale: 0.7;
+        translate: -20px -20px;
+    }
+}
+
+/* Pastikan menu tetap muncul di layar besar */
+@media screen and (min-width: 767px) {
+    .burger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
