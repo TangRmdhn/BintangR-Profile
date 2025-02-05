@@ -1,0 +1,315 @@
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    background: #000 url(stars.png);
+    height: auto;
+    color: white;
+    margin: 0;
+    font-family: 'Roboto Mono';
+}
+
+.parallax {
+    background: url(titik.png) repeat center top;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 8% ;
+}
+
+.navbar {
+    height: 80px;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0;
+    gap: 100px;
+    translate: -70px 0px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    border: solid;
+    border-radius: 50px;
+    padding: 8px;
+    translate: 0px -10px;
+    transition: 200ms;
+}
+
+.btn:hover {
+    transition: 200ms;
+    transform: scale(1.1);
+    background: white;
+    /* box-shadow: white; */
+    color: black;
+}
+
+.contact {
+    height: 20px;
+    border-radius: 25px;
+    width: 100px;
+    height: 40px;
+    margin-top: -10px;
+    margin-right: 50px;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+}
+
+.contact:hover {
+    transition: 800ms;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.249);   
+}
+
+.logo {
+    /* padding-top: 25px; */
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+}
+
+.home {
+    height: 648px;
+    /* background-color: rgba(255, 255, 255, 0.412); */
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-size: 40px;
+}
+
+.home h3 {
+    margin: 0;
+}
+
+.home h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.home p {
+    margin: 1;
+}
+
+.project {
+    height: auto;
+    /* background-color: rgba(208, 198, 172, 0.412); */
+    /* display: flex;
+    justify-content: center; */
+    margin-bottom: 50px;
+    padding-top: 0;
+}
+
+.cent-proj {
+    display: flex;
+    justify-content: center;
+}
+
+.two-box {
+    width: 60%;
+    /* background-color: rgba(0, 255, 255, 0.382); */
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 20%; */
+    margin-bottom: 80px;
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+    /* background-color: rgba(0, 0, 255, 0.411); */
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+    background-color: rgba(255, 255, 255, 0.468);
+    border-radius: 10%;
+    transition: 200ms;
+}
+
+.box:hover {
+    cursor: pointer;
+    transition: 200ms;
+    background-color: red;
+    transform: scale(1.2);
+}
+
+.jud-proj {
+    height: 540px;
+    background: url(clouds.png) center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.jud-proj h1 {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 50px;
+    margin-top: 0;
+    padding-top: 260px;
+}
+
+.container-scroll {
+    translate:0 30px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.scroller {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.item {
+    display: inline-block;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    padding: 10px 10px;
+    margin: 0 15px;
+    transition: transform 0.2s;
+    font-size: 20px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.bottom {
+    background-color: gray;
+    border-radius:50px 50px 0px 0px;
+    height: 250px;
+    display: flex;
+}
+
+.cont-bot{
+    width: 50%;
+    height: 100%;
+}
+
+.cont-bot h1 {
+    translate: 190px 90px;
+    color: #000;
+}
+
+.cont-bot-icon{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+.cont-bot-icon a{
+    width: 20px;
+    height: 20px;
+    translate: 50px 100px;
+    margin-left: 20px;
+    padding: 20px;
+    border: solid;
+    border-radius: 50px;
+    border-color: #000;
+}
+
+.cont-bot-icon img {
+    scale: 0.8;
+    translate: -15px -15px;
+}
+
+.email {
+    /* background: url(icons8-email-50.png);
+    background-size: 100%; */
+}
+
+.linkedin {
+    /* background: url(icons8-linkedin-50.png);
+    background-size: 100%; */
+}
+
+.instagram {
+    /* background: url(icons8-instagram-50.png);
+    background-size: 100%; */
+}
+
+.github {
+    /* background: url(icons8-github-50.png);
+    background-size: 100%; */
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar{
+        transform: translateY(8px);
+    }
+    
+    .home {
+        transform: translateY(100px);
+        font-size: 100%;
+        height: 400px;
+    }
+
+    .home h1 {
+        font-size: 230%;
+        margin-bottom: 30px;
+    }
+    
+    .home p {
+        margin-bottom: 15px;
+    }
+
+    .container-scroll {
+        transform: translateY(140px);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .jud-proj {
+        background-size: 100%;
+    }
+
+    .two-box {
+        width: 70%;
+        margin-bottom: -60px;
+    }
+
+    .box {
+        width: 150px;
+        height: 280px;
+    }
+}
+
+/* Pastikan menu tetap muncul di layar besar */
+@media screen and (min-width: 767px) {
+    .burger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
