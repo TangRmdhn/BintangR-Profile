@@ -49,7 +49,7 @@ body {
     color: white;
 }
 
-.btn {
+.btn a{
     display: inline-block;
     border: solid;
     border-radius: 50px;
@@ -58,29 +58,12 @@ body {
     transition: 200ms;
 }
 
-.btn:hover {
+.btn a:hover {
     transition: 200ms;
     transform: scale(1.1);
     background: white;
     /* box-shadow: white; */
     color: black;
-}
-
-.contact {
-    height: 20px;
-    border-radius: 25px;
-    width: 100px;
-    height: 40px;
-    margin-top: -10px;
-    margin-right: 50px;
-    font-family: 'Roboto Mono';
-    font-size: 16px;
-}
-
-.contact:hover {
-    transition: 800ms;
-    color:white;
-    background-color: rgba(255, 255, 255, 0.249);   
 }
 
 .logo {
@@ -150,7 +133,6 @@ body {
 .box:hover {
     cursor: pointer;
     transition: 200ms;
-    background-color: red;
     transform: scale(1.2);
 }
 
@@ -202,35 +184,36 @@ body {
 .bottom {
     background-color: gray;
     border-radius:50px 50px 0px 0px;
-    height: 250px;
+    height: 170px;
     display: flex;
+    justify-content: space-evenly;
 }
 
-.cont-bot{
-    width: 50%;
-    height: 100%;
-}
-
-.cont-bot h1 {
-    translate: 190px 90px;
+.bottom h1 {
+    translate: 0px 70px;
+    padding: 0;
+    margin: 0;
+    height: 0;
     color: #000;
 }
 
 .cont-bot-icon{
-    width: 50%;
-    height: 100%;
+    translate: 0px 55px;
+    padding: 0;
+    margin: 0;
+    height: 0;
     display: flex;
 }
 
 .cont-bot-icon a{
     width: 20px;
     height: 20px;
-    translate: 50px 100px;
     margin-left: 20px;
     padding: 20px;
     border: solid;
     border-radius: 50px;
     border-color: #000;
+    transition: 300ms;
 }
 
 .cont-bot-icon img {
@@ -238,24 +221,10 @@ body {
     translate: -15px -15px;
 }
 
-.email {
-    /* background: url(icons8-email-50.png);
-    background-size: 100%; */
-}
-
-.linkedin {
-    /* background: url(icons8-linkedin-50.png);
-    background-size: 100%; */
-}
-
-.instagram {
-    /* background: url(icons8-instagram-50.png);
-    background-size: 100%; */
-}
-
-.github {
-    /* background: url(icons8-github-50.png);
-    background-size: 100%; */
+.cont-bot-icon a:hover {
+    transition: 300ms;
+    scale: 1.5;
+    background-color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -297,8 +266,26 @@ body {
     }
 
     .box {
-        width: 150px;
-        height: 280px;
+        width: 180px;
+        height: 240px;
+    }
+
+    .bottom h1 {
+        font-size: 20px;
+    }
+
+    .bottom {
+        width: auto;
+    }
+    
+    .cont-bot-icon a{
+        width: 10px;
+        height: 10px;
+    }
+    
+    .cont-bot-icon img {
+        scale: 0.7;
+        translate: -20px -20px;
     }
 }
 
