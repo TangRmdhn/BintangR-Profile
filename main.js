@@ -1,7 +1,6 @@
 const scroller = document.querySelector('.scroller');
 const container = document.querySelector('.container-scroll');
 
-// Pastikan elemen ada sebelum dijalankan
 if (scroller && container) {
     function duplicateContent() {
         let content = scroller.innerHTML;
@@ -19,7 +18,6 @@ if (scroller && container) {
     }, 10);
 }
 
-// Menambahkan event listener ke tombol burger
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 
